@@ -1,0 +1,30 @@
+body{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+ul{
+    background-color: gray;
+}
+li{
+    display: flex;
+    
+    padding: 20px 20px 20px 0px ;
+}
+
+.remover{
+    margin-left: 20px;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: blue;
+}
+h1{
+    color: green;
+}
+
+.home{
+    background-color: aqua;
+    cursor: pointer;
+}

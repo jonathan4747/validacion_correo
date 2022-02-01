@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='css/styles1.css')}}"/>
+        <title> Registro </title>
+    </head>
+    <body>
+        <div>
+            <h1> Email Addresses Entered </h1>
+            <ul>
+                {% for usuario in email: %}
+                    <li>
+                        {{ usuario['correo'] }} <spam>-----</spam>{{usuario['created_at']}}
+                        <form action="/success/{{usuario['id']}}", method="POST">
+                            <button class='remover'> 
+                                <strong>Remover</strong> 
+                            </button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+            <div>
+                <form action="/" method="GET">
+                    <button type="submit" class='home' >
+                        Regresar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
